@@ -1,0 +1,58 @@
+@import "_reset";
+
+@import "_header";
+
+@import "_slider";
+
+@import "_statistics";
+
+@import "_courses";
+
+@import "_details";
+
+@import "_experts";
+
+@import "_reviews";
+
+@import "_questions";
+
+@import "_form";
+
+@import "_footer";
+
+@import "_coursestwo";
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+._container {
+    max-width: 1170px;
+    margin: 0px auto;
+    padding: 0px 30px;
+    @media screen and (max-width: 740px) {
+        max-width: 680px;
+    }
+}
+
+._font__bold {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 35px;
+}
+
+._yellow__button {
+    background-color: #FCC344;
+    border-radius: 16px;
+    border: none;
+    width: 168px;
+    height: 48px;
+    &:hover {
+        background-color: black;
+        color: white
+    }
+    &:active {
+        background-color: #717171;
+        color: white
+    }
+}

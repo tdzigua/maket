@@ -1,0 +1,106 @@
+.courses__two {
+    padding-top: 70px;
+    .courses__container {
+        .courses__box__container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            @media screen and (max-width: 1240px) {
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+            .all__box {
+                width: 30%;
+                @media screen and (max-width: 1240px) {
+                    width: 350px;
+                }
+                .course__box{
+                    display: flex;
+                    background: #F7F7F7;
+                    border-radius: 48px;
+                    width: 100%;
+                    height: 300px;
+                    margin-top: 30px;
+                    padding-top: 30px;
+                    flex-direction: column;
+                    .item {
+                        margin-left: 30px;
+                    }
+                    .image {
+                        .image-icon {
+                            display: flex;
+                            width: 100px;
+                        }
+                    }    
+                    .course__time {
+                        background: #FCC344;
+                        text-align: center;
+                        padding-top: 5px;
+                        height: 19px;
+                    }
+                    .time_first {
+                        width: 72px;
+                    }
+                    .time__second {
+                        width: 137px;
+                    }
+                    .time__third {
+                        width: 94px;
+                    }
+                    .headline {
+                        margin-top: 15px;
+                        font-size: 22px;
+                    }
+                    .description {
+                        color: #717171;
+                        margin-top: 15px;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+                .info__box {
+                    padding-top: 30px;
+                    margin-left: 30px;
+                    .text__wrapper {
+                        .text {
+                            line-height: 1.9em;
+                        }
+                        .hr {
+                            margin-top: 22px;
+                            background-color: black;
+                            color: black;
+                        }
+                        .price {
+                            font-weight: 600;
+                            font-size: 25px;
+                            margin-top: 20px;
+                            text-align: center;
+                        }
+                        .sale {
+                            color: #717171;
+                            text-align: center;
+                            margin-top: 10px;
+                            font-size: 12px;
+                        }
+                        .button {
+                            margin-top: 20px;
+                            display: flex;
+                            justify-content: center;
+                        }
+                        .learn__more {
+                            margin-top: 20px;
+                            display: flex;
+                            justify-content: center;
+                            &:hover {
+                                color: #FCC344;
+                            }
+                            &:active {
+                                color: #F7F7F7;
+                            }
+                        }
+                    }
+                }
+            }   
+        }
+    }
+}

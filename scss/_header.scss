@@ -1,0 +1,116 @@
+.header {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    .header__container {
+        display: flex;
+        min-height: 85px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .header__logo {
+            @media screen and (max-width: 840px) {
+                z-index: 2;
+            }
+        }
+        .header__burger {
+            display: none;
+            &._active:before {
+                transform: rotate(45deg);
+                top: 0px;
+                transition: 0.4s;
+            }
+            &._active:after {
+                transform: rotate(-45deg);
+                top: 0px;
+                transition: 0.4s;
+            }
+            &._active span {
+                transform: scale(0);
+                transition: 0.4s;
+            }
+            &:before, &:after, span {
+                content: '';
+                background: black;
+                position: absolute;
+                width: 100%;
+                height: 4px;
+            }
+            &:before {
+                top: -10px;
+            }
+            &:after {
+                top: 10px;
+            }
+            @media screen and (max-width: 840px) {
+                display: block;
+                position: relative;
+                margin-top: 13px;
+                width: 25px;
+                height: 20px;
+                z-index: 100;
+            }
+        }
+        .header__menu {
+            @media screen and (max-width: 840px) {
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                background-color: white;
+                top: -100%;
+                left: 0;
+            }
+            &._active {
+                top: 0;
+                transition: all 0.5s ease;
+            }
+            .menu__list {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 347px;
+                padding-top: 35px;
+                @media screen and (max-width: 840px) {
+                    display: block;
+                    text-align: center;
+                    width: 270px;
+                    padding-top: 0px;
+                    margin-top: 100px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    text-align: center;
+                    border-bottom: 1px solid black;
+                }
+                .menu__item {
+                    @media screen and (max-width: 840px) {
+                        margin-bottom: 25px;
+                    }
+                    &:last-child {
+                        margin-bottom: 35px;
+                    }
+                }
+            }
+        }
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Open Sans";
+            @media screen and (max-width: 840px) {
+                display: block;
+                z-index: 2;
+                position: absolute;
+                margin-left: auto;
+                margin-right: auto;
+                top: -100%;
+            }
+            &._active {
+                top: 365%;
+                left: -80px;
+                margin-left: 50%;
+                margin-right: 50%;
+                transition: all 0.5s ease;
+            }
+        }
+    }     
+}

@@ -1,0 +1,41 @@
+.questions {
+    padding-top: 70px;
+    .questions__container {
+        .headline {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .accordion__wrapper {
+            border-bottom: 1px solid black;
+            .accordion {
+                transition: 0.4s;
+                width: 100%;
+                border: none;
+                outline: none;
+                background-color: white;
+                font-size: 17px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border-top: 1px solid black;
+                cursor: pointer;
+                &:after {
+                    content: '+';
+                    font-size: 14px;
+                    color: black;
+                    float: right;
+                }
+                &active:after {
+                    content: "-";
+                }
+            }
+            .panel {
+                margin-bottom: 20px;
+                display: none;
+                overflow: hidden;
+                &.show {
+                    display: block;
+                }
+            }
+        }
+    }
+}

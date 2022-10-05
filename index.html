@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500,700&display=swap&subset=cyrillic-ext" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic&display=swap&subset=cyrillic-ext" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/slider.css">
+
+
+    <script src="http://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="./js/script.js"></script>
+    <title>Money Fest</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container _container">
+            <a href="" class="header__logo">
+                <img src="./images/MoneyFest-logo.png" alt="Money Fest">
+            </a>
+            <div class="header__burger">
+                <span></span>
+            </div>
+            <nav class="header__menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="" class="menu__link">Главная</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">Курсы</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">Эксперты</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">Публикации</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="button _yellow__button">
+                Личный кабинет
+            </button>
+        </div>
+    </header>
+
+
+    <div class="adaptivn-slayder">
+        <div class="parag">
+            <div class="card__content">
+                <p class="headline _font__bold">
+                    Учим зарабатывать <br> на криптовалюте <br> с нуля
+                </p>
+                <p class="description">
+                    Онлайн-школа <br> и профессиональное сообщество
+                </p>
+                <button class="button _yellow__button">
+                    Выбрать курс
+                </button>
+                <img src="./MaskGroup.png" alt="" style="width: 200px; ">
+            </div>
+        </div>
+
+        <div class="parag">
+            <div class="card__content">
+                <p class="headline _font__bold">
+                    Криптоинвестиции: <br> успешный старт
+                </p>
+                <p class="description">
+                    Научим зарабатывать <br> на криптовалюте с нуля. 
+                </p>
+                <button class="button _yellow__button">
+                    Записаться на курс 
+                </button>
+                <img src="./MaskGroup.png" alt="" style="width: 200px; ">
+            </div>
+        </div>
+
+        <div class="parag">
+            <div class="card__content">
+                <p class="headline _font__bold">
+                    Индивидуальное сопро- <br> вождение эксперта
+                </p>
+                <p class="description">
+                    Премиальный пакет услуг: научим зарабатывать <br>
+                    максимум на трейдинге за короткое время.
+                </p>
+                <button class="button _yellow__button">
+                    Записаться на курс 
+                </button>
+                <img src="./MaskGroup.png" alt="" style="width: 200px; ">
+            </div>
+        </div>
+        <a class="prev" onclick="minusSlide()">❮</a>
+        <a class="next" onclick="plusSlide()">❯</a>
+        </div>
+
+    <div class="uneizmen-akemada">
+        <span class="noguma-pomoki-kadra" onclick="currentSlide(1)"></span>  
+        <span class="noguma-pomoki-kadra" onclick="currentSlide(2)"></span>  
+        <span class="noguma-pomoki-kadra" onclick="currentSlide(3)"></span>  
+    </div>
+
+      <script>
+        var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlide() {
+  showSlides(slideIndex += 1);
+}
+
+function minusSlide() {
+  showSlides(slideIndex -= 1);  
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("parag");
+  var dots = document.getElementsByClassName("noguma-pomoki-kadra");
+  if (n > slides.length) {
+  slideIndex = 1
+  }
+  if (n < 1) {
+  slideIndex = slides.length
+  }
+  for (i = 0; i < slides.length; i++) {
+  slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+  dots[i].className = dots[i].className.replace("deystvuyus", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " deystvuyus";
+}
+      </script>
+
+
+
+
+
+
+
+
+
+    <div class="statistics">
+        <div class="statistics__container _container" id="counter">
+            <div class="statistics__box">
+                <div class="number _font__bold">
+                    <span class="numbers__item"><span id="num1" data-num="4000" data-suffix="+" data-duration="2">0</span>
+                </div>
+                <div class="text">
+                    Учеников уже зарабатывают <br> на криптовалюте
+                </div>
+            </div>
+            <div class="statistics__box">
+                <div class="number _font__bold">
+                    <span class="numbers__item"><span id="num2" data-num="700" data-suffix="+" data-duration="2">0</span></span>
+                </div>
+                <div class="text">
+                    Трейдеров в закрытом <br> инвест-комьюнити
+                </div>
+            </div>
+            <div class="statistics__box">
+                <div class="number _font__bold">
+                    <span class="numbers__item"><span id="num3" data-num="6" data-suffix=" лет" data-duration="5">0</span>
+                </div>
+                <div class="text">
+                    Успешно обучаем <br> людей зарабатывать
+                </div>
+            </div>
+            <div class="statistics__box">
+                <div class="number _font__bold">
+                    <span class="numbers__item"><span id="num4" data-num="17" data-prefix="$"  data-suffix="+ млн">0</span>
+                </div>
+                <div class="text">
+                    Под консультационным <br> управлением
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/countUp.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <div class="courses">
+        <div class="courses__container _container">
+            <div class="headline _font__bold">
+                Курсы
+            </div>
+            <div class="courses__box__container">
+                <div class="course__box">
+                    <div class="image item">
+                        <img class="image-icon" src="./images/courses_first.png" alt="">
+                    </div>
+                    <div class="course__time item time_first">
+                        3 недели
+                    </div>
+                    <div class="headline item _font__bold">
+                        Криптоинвестиции: <br> успешный старт
+                    </div>
+                    <div class="description item">
+                        Базовые знания для новичков. <br>
+                        Поможем разобраться с биржей, <br>
+                        купить криптовалюту и совершить <br>
+                        первые выгодные сделки с нуля.
+                        <div class="image">
+                            <img class="image-icon" src="./images/courses_first.png" alt="">
+                        </div>
+                    </div>
+                    <div class="learn__more item">
+                        <a href="">Подробнее &rarr;</a>
+                    </div>
+                    
+                </div>
+                <div class="course__box">
+                    <div class="image item">
+                        <img class="image-icon" src="./images/courses_second.png" alt="logo">
+                    </div>
+                    <div class="course__time item time__second">
+                        от 2 до 8 месяцев
+                    </div>
+                    <div class="headline item _font__bold">
+                        Мастерская трейдинга: <br> практика и заработок
+                    </div>
+                    <div class="description item">
+                        Полное погружение в трейдинг: <br>
+                        практика работы с профессио- <br>
+                        нальными инструментами и стра- <br>
+                        тегии для максимальной прибыли. <br>
+                        <div class="image">
+                            <img class="image-icon" src="./images/courses_second.png" alt="logo">
+                        </div>
+                    </div>
+                    <div class="learn__more item">
+                        <a href="">Подробнее &rarr;</a>
+                    </div>
+                </div>
+                <div class="course__box">
+                    <div class="image" style="margin-left: 10px;">
+                        <img class="image-icon" src="./images/courses_third.png" alt="logo">
+                    </div>
+                    <div class="course__time item time__third">
+                        от 1 месяца
+                    </div>
+                    <div class="headline item _font__bold">
+                        Индивидуальное сопро- <br> вождение эксперта
+                    </div>
+                    <div class="description item">
+                        Премиальный пакет услуг. <br>
+                        Индивидуальные уроки, <br>
+                        постоянная связь, <br>
+                        консультационное управление.
+                        <div class="image">
+                            <img class="image-icon" src="./images/courses_third.png" alt="logo">
+                        </div>
+                    </div>
+                    <div class="learn__more item">
+                        <a href="">Подробнее &rarr;</a>
+                    </div>
+                </div>
+                <div class="course__box__last">
+                    <div class="headline _font__bold">
+                        Какой выбрать?
+                    </div>
+                    <div class="description">
+                        <a class="link" href="./courses.html">Сравнить курсы &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="details">
+        <div class="details__container _container">
+            <div class="headline _font__bold">
+                Как проходит обучение
+            </div>
+            <div class="video__wrapper">
+                <video class="video" poster="./images/video_poster.png" src="https://youtu.be/OQZNAMjC6Vg" controls></video>
+            </div>
+            <div class="list__container">
+                <div class="list">
+                    <div class="number _font__bold">
+                        1
+                    </div>
+                    <div class="headline _font__bold">
+                        Видеоуроки <br> и онлайн-встречи
+                    </div>
+                    <div class="description">
+                        Доступ к ним остается <br> навсегда.
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="number _font__bold">
+                        2
+                    </div>
+                    <div class="headline _font__bold">
+                        Домашние <br> задания
+                    </div>
+                    <div class="description">
+                        С обратной связью <br> от эксперта.
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="number _font__bold">
+                        3
+                    </div>
+                    <div class="headline _font__bold">
+                        Кураторы <br> курсов
+                    </div>
+                    <div class="description">
+                        Всегда на связи, чтобы <br> ответить на ваши вопросы.
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="number _font__bold">
+                        4
+                    </div>
+                    <div class="headline _font__bold">
+                        Чат с участниками <br> курса
+                    </div>
+                    <div class="description">
+                        Новости и прогнозы, полезные <br> материалы и просто общение.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="experts">
+        <div class="experts__container _container">
+            <div class="headline _font__bold">
+                Эксперты школы
+            </div>
+            <div class="teachers__container">
+                <div class="teacher">
+                    <div class="photo">
+                        <img src="./images/teacher_1.png" alt="teacher">
+                    </div>
+                    <div class="headline _font__bold">
+                        Максим <br> Денисламов
+                    </div>
+                    <div class="description">
+                        Гуру технического анализа, <br>
+                        автор книг по ивестициям, <br> 
+                        капитал под консультационным <br> 
+                        управлением — $8 млн.
+                    </div>
+                </div>
+                <div class="teacher">
+                    <div class="photo">
+                        <img src="./images/teacher_2.png" alt="teacher">
+                    </div>
+                    <div class="headline _font__bold">
+                        Дмитрий <br> Тюрин
+                    </div>
+                    <div class="description">
+                        Инвестор на криптовалютном <br> 
+                        рынке с положительной <br>
+                        доходностью 90 месяцев <br>
+                        подряд. <br>
+                    </div>
+                </div>
+                <div class="teacher">
+                    <div class="photo">
+                        <img src="./images/teacher_3.png" alt="teacher">
+                    </div>
+                    <div class="headline _font__bold">
+                        Мария <br> Лощилова
+                    </div>
+                    <div class="description">
+                        Специалист по криптоинвести- <br>
+                        циям, соавтор курсов Манифест. <br>
+                        В 22 заработала свой первый <br> 
+                        миллион.
+                    </div>
+                </div>
+                <div class="teacher">
+                    <div class="photo">
+                        <img src="./images/teacher_4.png" alt="teacher">
+                    </div>
+                    <div class="headline _font__bold">
+                        Анатолий <br> Дагиль
+                    </div>
+                    <div class="description">
+                        Специалист по крипто- <br>
+                        инвестициям, автор курсов <br>
+                        Манифест, лицензированный <br> 
+                        брокер. 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="reviews">
+        <div class="reviews__container _container">
+            <div class="headline">
+                <p class="_font__bold">
+                    Ученики про нас
+                </p> 
+                <p class="add__review">
+                    <a href="">Добавить отзыв</a>
+                </p>
+            </div>
+            <div class="reviews__wrapper">
+                <div class="review">
+                    <div class="info__wrapper">
+                        <div class="photo">
+                            <img src="./images/review_photo.png" alt="anastasia">
+                        </div>
+                        <div class="name__date__wrapper">
+                            <p class="name _font__bold">
+                                Анастасия
+                            </p>
+                            <p class="date">
+                                12 марта 2021
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text">
+                        Дмитрий, спасибо Вам за уроки))) Вы <br>
+                        обьясняете доступно и понятно каждую <br>
+                        тему. Во многом, благодаря Вам, хочется <br>
+                        и дальше развиваться в данном <br>
+                        направлении. Спасибо за те знания, <br>
+                        которые Вы вкладываете в своих 
+                        учеников.
+                    </div>
+                </div>
+
+                <div class="review">
+                    <div class="info__wrapper">
+                        <div class="photo">
+                            <img src="./images/review_photo.png" alt="anastasia">
+                        </div>
+                        <div class="name__date__wrapper">
+                            <p class="name _font__bold">
+                                Анастасия
+                            </p>
+                            <p class="date">
+                                12 марта 2021
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text">
+                        Дмитрий, спасибо Вам за уроки))) Вы <br>
+                        обьясняете доступно и понятно каждую <br>
+                        тему. Во многом, благодаря Вам, хочется <br>
+                        и дальше развиваться в данном <br>
+                        направлении. Спасибо за те знания, <br>
+                        которые Вы вкладываете в своих 
+                        учеников.
+                    </div>
+                </div>
+
+                <div class="review">
+                    <div class="info__wrapper">
+                        <div class="photo">
+                            <img src="./images/review_photo.png" alt="anastasia">
+                        </div>
+                        <div class="name__date__wrapper">
+                            <p class="name _font__bold">
+                                Анастасия
+                            </p>
+                            <p class="date">
+                                12 марта 2021
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text">
+                        Дмитрий, спасибо Вам за уроки))) Вы <br>
+                        обьясняете доступно и понятно каждую <br>
+                        тему. Во многом, благодаря Вам, хочется <br>
+                        и дальше развиваться в данном <br>
+                        направлении. Спасибо за те знания, <br>
+                        которые Вы вкладываете в своих 
+                        учеников.
+                    </div>
+                </div>
+
+                <div class="review">
+                    <div class="info__wrapper">
+                        <div class="photo">
+                            <img src="./images/review_photo.png" alt="anastasia">
+                        </div>
+                        <div class="name__date__wrapper">
+                            <p class="name _font__bold">
+                                Анастасия
+                            </p>
+                            <p class="date">
+                                12 марта 2021
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text">
+                        Дмитрий, спасибо Вам за уроки))) Вы <br>
+                        обьясняете доступно и понятно каждую <br>
+                        тему. Во многом, благодаря Вам, хочется <br>
+                        и дальше развиваться в данном <br>
+                        направлении. Спасибо за те знания, <br>
+                        которые Вы вкладываете в своих 
+                        учеников.
+                    </div>
+                </div>
+
+                <div class="review">
+                    <div class="info__wrapper">
+                        <div class="photo">
+                            <img src="./images/review_photo.png" alt="anastasia">
+                        </div>
+                        <div class="name__date__wrapper">
+                            <p class="name _font__bold">
+                                Анастасия
+                            </p>
+                            <p class="date">
+                                12 марта 2021
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text">
+                        Дмитрий, спасибо Вам за уроки))) Вы <br>
+                        обьясняете доступно и понятно каждую <br>
+                        тему. Во многом, благодаря Вам, хочется <br>
+                        и дальше развиваться в данном <br>
+                        направлении. Спасибо за те знания, <br>
+                        которые Вы вкладываете в своих 
+                        учеников.
+                    </div>
+                </div>
+
+                <div class="review">
+                    <div class="info__wrapper">
+                        <div class="photo">
+                            <img src="./images/review_photo.png" alt="anastasia">
+                        </div>
+                        <div class="name__date__wrapper">
+                            <p class="name _font__bold">
+                                Анастасия
+                            </p>
+                            <p class="date">
+                                12 марта 2021
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text">
+                        Дмитрий, спасибо Вам за уроки))) Вы <br>
+                        обьясняете доступно и понятно каждую <br>
+                        тему. Во многом, благодаря Вам, хочется <br>
+                        и дальше развиваться в данном <br>
+                        направлении. Спасибо за те знания, <br>
+                        которые Вы вкладываете в своих 
+                        учеников.
+                    </div>
+                </div>
+
+                <div class="review" style="display: none;">
+                    <div class="info__wrapper">
+                        <div class="photo">
+                            <img src="./images/review_photo.png" alt="anastasia">
+                        </div>
+                        <div class="name__date__wrapper">
+                            <p class="name _font__bold">
+                                Анастасия
+                            </p>
+                            <p class="date">
+                                12 марта 2021
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text">
+                        Дмитрий, спасибо Вам за уроки))) Вы <br>
+                        обьясняете доступно и понятно каждую <br>
+                        тему. Во многом, благодаря Вам, хочется <br>
+                        и дальше развиваться в данном <br>
+                        направлении. Спасибо за те знания, <br>
+                        которые Вы вкладываете в своих 
+                        учеников.
+                    </div>
+                </div>
+
+                <div class="review" style="display: none;">
+                    <div class="info__wrapper">
+                        <div class="photo">
+                            <img src="./images/review_photo.png" alt="anastasia">
+                        </div>
+                        <div class="name__date__wrapper">
+                            <p class="name _font__bold">
+                                Анастасия
+                            </p>
+                            <p class="date">
+                                12 марта 2021
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text">
+                        Дмитрий, спасибо Вам за уроки))) Вы <br>
+                        обьясняете доступно и понятно каждую <br>
+                        тему. Во многом, благодаря Вам, хочется <br>
+                        и дальше развиваться в данном <br>
+                        направлении. Спасибо за те знания, <br>
+                        которые Вы вкладываете в своих 
+                        учеников.
+                    </div>
+                </div>
+
+                <div class="review" style="display: none;">
+                    <div class="info__wrapper">
+                        <div class="photo">
+                            <img src="./images/review_photo.png" alt="anastasia">
+                        </div>
+                        <div class="name__date__wrapper">
+                            <p class="name _font__bold">
+                                Анастасия
+                            </p>
+                            <p class="date">
+                                12 марта 2021
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text">
+                        Дмитрий, спасибо Вам за уроки))) Вы <br>
+                        обьясняете доступно и понятно каждую <br>
+                        тему. Во многом, благодаря Вам, хочется <br>
+                        и дальше развиваться в данном <br>
+                        направлении. Спасибо за те знания, <br>
+                        которые Вы вкладываете в своих 
+                        учеников.
+                    </div>
+                </div>
+
+
+                <div class="review" style="display: none;">
+                    <div class="info__wrapper">
+                        <div class="photo">
+                            <img src="./images/review_photo.png" alt="anastasia">
+                        </div>
+                        <div class="name__date__wrapper">
+                            <p class="name _font__bold">
+                                Анастасия
+                            </p>
+                            <p class="date">
+                                12 марта 2021
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text">
+                        Дмитрий, спасибо Вам за уроки))) Вы <br>
+                        обьясняете доступно и понятно каждую <br>
+                        тему. Во многом, благодаря Вам, хочется <br>
+                        и дальше развиваться в данном <br>
+                        направлении. Спасибо за те знания, <br>
+                        которые Вы вкладываете в своих 
+                        учеников.
+                    </div>
+                </div>
+
+                <div class="review" style="display: none;">
+                    <div class="info__wrapper">
+                        <div class="photo">
+                            <img src="./images/review_photo.png" alt="anastasia">
+                        </div>
+                        <div class="name__date__wrapper">
+                            <p class="name _font__bold">
+                                Анастасия
+                            </p>
+                            <p class="date">
+                                12 марта 2021
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text">
+                        Дмитрий, спасибо Вам за уроки))) Вы <br>
+                        обьясняете доступно и понятно каждую <br>
+                        тему. Во многом, благодаря Вам, хочется <br>
+                        и дальше развиваться в данном <br>
+                        направлении. Спасибо за те знания, <br>
+                        которые Вы вкладываете в своих 
+                        учеников.
+                    </div>
+                </div>
+
+                <div class="review" style="display: none;">
+                    <div class="info__wrapper">
+                        <div class="photo">
+                            <img src="./images/review_photo.png" alt="anastasia">
+                        </div>
+                        <div class="name__date__wrapper">
+                            <p class="name _font__bold">
+                                Анастасия
+                            </p>
+                            <p class="date">
+                                12 марта 2021
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text">
+                        Дмитрий, спасибо Вам за уроки))) Вы <br>
+                        обьясняете доступно и понятно каждую <br>
+                        тему. Во многом, благодаря Вам, хочется <br>
+                        и дальше развиваться в данном <br>
+                        направлении. Спасибо за те знания, <br>
+                        которые Вы вкладываете в своих 
+                        учеников.
+                    </div>
+                </div>
+            </div>
+            <button class="review__button" id="review__button">
+                <span>Показать еще</span>
+            </button>
+        </div>
+    </div>
+    <script src="./js/reviews.js"></script>
+
+    <div class="questions">
+        <div  class="questions__container _container">
+            <div class="headline _font__bold">
+                Остались вопросы?
+            </div>
+
+            <div class="accordion__wrapper">
+                <button class="accordion">Как проходит обучение?</button>
+                <div class="panel">
+                    <p>Какой-то текст...</p>
+                </div>
+
+                <button class="accordion">Что будет после оплаты?</button>
+                <div class="panel">
+                    <p>Какой-то текст...</p>
+                </div>
+
+                <button class="accordion">Возможна ли оплата курса частями?</button>
+                <div class="panel">
+                    <p>Какой-то текст...</p>
+                </div>
+
+                <button class="accordion">Возможно ли дистанционное обучение?</button>
+                <div class="panel">
+                    <p>Какой-то текст...</p>
+                </div>
+
+                <button class="accordion">Помогаем ли мы с трудоустройством?</button>
+                <div class="panel">
+                    <p>Какой-то текст...</p>
+                </div>
+
+                <button class="accordion">Выдаем ли мы сертификат по окончанию обучения?</button>
+                <div class="panel">
+                    <p>Какой-то текст...</p>
+                </div>
+
+                <button class="accordion">Первые шаги инвестора</button>
+                <div class="panel">
+                    <p>Какой-то текст...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/questions.js"></script>
+
+    <div class="questions__form">
+        <div  class="form__container _container">
+            <div class="form">
+                <div class="text__wrapper">
+                    <div class="headline">
+                        Есть вопросы? <br> Сейчас ответим
+                    </div>
+                    <div class="description">
+                        Оставьте свои контакты
+                    </div>
+                </div>
+                <div class="input__wrapper">
+                    <div class="first__input__block">
+                        <input class="name__input input" placeholder="Имя" type="text">
+                    </div>
+                    <div class="second__input__block">
+                        <input class="phone__input input" placeholder="Номер телефона" type="text">
+                        <input class="email__input input" placeholder="Email" type="text">
+                    </div>
+                    <div class="third__input__block">
+                        <p class="text">
+                            Нажимая «Отправить», <br> соглашаюсь с <a href="" style="text-decoration: underline;">правилами</a> 
+                        </p>
+                        <button class="button">
+                            Отправить
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer__container _container">
+            <button onclick="topFunction()" class="top" id="myBtn" title="Go to top">&uarr;</button>
+            <div class="images__wrapper">
+                <div class="logo">
+                    <img src="./images/money-fest-logo-white.png" class="money__logo" alt="MoneyFest">
+                </div>
+                <div class="social__media">
+                    <img class="social" src="./images/youtube__logo.svg" alt="youtube">
+                    <img class="social" src="./images/telegram__logo.svg" alt="telegram">
+                    <img class="social" src="./images/vk_logo.svg" alt="vk">
+                </div>
+            </div>
+            <div class="courses__wrapper">
+                <p class="text">
+                    ВСЕ КУРСЫ
+                </p>
+                <p>
+                    Криптоинвестиции: успешный старт
+                </p>
+                <p class="text">
+                    Мастерская трейдинга: практика и заработок
+                </p>
+                <p class="text">
+                    Индивидуальное сопровождение эксперта
+                </p>
+            </div>
+            <div class="menu__wrapper">
+                <p class="text">
+                    Главная
+                </p>
+                <p class="text">
+                    Курсы
+                </p>
+                <p class="text">
+                    Эксперты
+                </p>
+            </div>
+            <hr class="hr">
+            <div class="company__info">
+                <p class="text">
+                    ООО «Манифест» 
+                </p>
+                <p class="text">
+                    Политика конфиденциальности
+                </p>
+                <p class="text">
+                    Договор–оферта
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="./js/footer.js"></script>
+
+
+
+</body>
+</html>

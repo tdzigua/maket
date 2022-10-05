@@ -1,0 +1,47 @@
+.experts {
+    padding-top: 70px;
+    .experts__container {
+        .teachers__container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            @media screen and (max-width: 1190px) {
+                flex-wrap: wrap;
+            }
+            .teacher {
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                @media screen and (max-width: 1190px) {
+                    width: 48%;
+                }
+                @media screen and (max-width: 620px) {
+                    width: 100%;
+                }
+                .photo {
+                    margin-top: 15px;
+                    border-radius: 24px;
+                    &:hover {
+                        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+                        margin-top: -20px;
+                    }
+                    &:active {
+                        box-shadow: 0 14px 28px rgba(230, 196, 41, 0.2), 0 10px 10px rgba(230, 196, 41, 0.2);
+                    }
+                }
+                .headline {
+                    margin-top: 15px;
+                    font-size: 22px;
+                    text-align: start;
+                }
+                .description {
+                    margin-top: 15px;
+                    font-size: 12px;
+                    color: #717171;
+                }
+            }
+        }
+    }
+}
